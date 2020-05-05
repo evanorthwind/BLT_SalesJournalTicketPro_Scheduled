@@ -231,7 +231,7 @@
               <av:Size x:Key="ShapeSize">200,51</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="2. Import journal to NAV" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_135">
+          <Sequence DisplayName="2. Import journal to NAV" sap:VirtualizedContainerService.HintSize="1619,3472" sap2010:WorkflowViewState.IdRef="Sequence_135">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="JournalPath_ImportToNAV" />
               <Variable x:TypeArguments="x:String" Name="In_FilePath_ToSend_ViaMail" />
@@ -296,7 +296,7 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                               </ActivityAction.Argument>
-                              <Sequence sap2010:Annotation.AnnotationText="1. Read total range of account no. sheet&#xA;2. Search for NEW in column J and import the journal corresponding to the statement file" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1396,2239" sap2010:WorkflowViewState.IdRef="Sequence_131">
+                              <Sequence sap2010:Annotation.AnnotationText="1. Read total range of account no. sheet&#xA;2. Search for NEW in column J and import the journal corresponding to the statement file" DisplayName="Do" sap:VirtualizedContainerService.HintSize="1002,2239" sap2010:WorkflowViewState.IdRef="Sequence_131">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="Sheet_Name" />
                                 </Sequence.Variables>
@@ -306,7 +306,7 @@
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Excel Popup " sap:VirtualizedContainerService.HintSize="1374,51" sap2010:WorkflowViewState.IdRef="Sequence_147">
+                                <Sequence DisplayName="Excel Popup " sap:VirtualizedContainerService.HintSize="980,51" sap2010:WorkflowViewState.IdRef="Sequence_147">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="x:Boolean" Name="popup" />
                                   </Sequence.Variables>
@@ -347,8 +347,8 @@
                                     </If.Then>
                                   </If>
                                 </Sequence>
-                                <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="1374,22" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_9" Index="0" Sheet="[Sheet_Name]" />
-                                <ui:ExcelReadRange AddHeaders="False" DataTable="[dt_StatusSheet]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1374,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" SheetName="[Sheet_Name]">
+                                <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="980,22" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_9" Index="0" Sheet="[Sheet_Name]" />
+                                <ui:ExcelReadRange AddHeaders="False" DataTable="[dt_StatusSheet]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="980,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_11" SheetName="[Sheet_Name]">
                                   <ui:ExcelReadRange.Range>
                                     <InArgument x:TypeArguments="x:String">
                                       <Literal x:TypeArguments="x:String" Value="" />
@@ -361,7 +361,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ExcelReadRange>
-                                <ui:ExcelLookUpRange DisplayName="Search NEW in column D" sap:VirtualizedContainerService.HintSize="1374,51" sap2010:WorkflowViewState.IdRef="ExcelLookUpRange_4" Range="[&quot;D2:D&quot;+dt_StatusSheet.Rows.Count.ToString]" Result="[NewFile_ImportJournal_CellAddress]" SheetName="[Sheet_Name]" Value="New">
+                                <ui:ExcelLookUpRange DisplayName="Search NEW in column D" sap:VirtualizedContainerService.HintSize="980,51" sap2010:WorkflowViewState.IdRef="ExcelLookUpRange_4" Range="[&quot;D2:D&quot;+dt_StatusSheet.Rows.Count.ToString]" Result="[NewFile_ImportJournal_CellAddress]" SheetName="[Sheet_Name]" Value="New">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -369,7 +369,7 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:ExcelLookUpRange>
-                                <If Condition="[NewFile_ImportJournal_CellAddress = &quot;&quot;]" DisplayName="If - New file exists then" sap:VirtualizedContainerService.HintSize="1374,1738" sap2010:WorkflowViewState.IdRef="If_100">
+                                <If Condition="[NewFile_ImportJournal_CellAddress = &quot;&quot;]" DisplayName="If - New file exists then" sap:VirtualizedContainerService.HintSize="980,1738" sap2010:WorkflowViewState.IdRef="If_100">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -387,14 +387,14 @@
                                     </ui:LogMessage>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence DisplayName="Check conditions and import the journal" sap:VirtualizedContainerService.HintSize="1149,1591" sap2010:WorkflowViewState.IdRef="Sequence_130">
+                                    <Sequence DisplayName="Check conditions and import the journal" sap:VirtualizedContainerService.HintSize="755,1591" sap2010:WorkflowViewState.IdRef="Sequence_130">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="1. Get file path details to import journal" sap:VirtualizedContainerService.HintSize="1127,51" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                                      <Sequence DisplayName="1. Get file path details to import journal" sap:VirtualizedContainerService.HintSize="733,51" sap2010:WorkflowViewState.IdRef="Sequence_128">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -412,7 +412,7 @@
                                           </ui:ExcelReadCell.Result>
                                         </ui:ExcelReadCell>
                                       </Sequence>
-                                      <Sequence sap2010:Annotation.AnnotationText="1. Launch NAV&#xA;2. Navigate to cash management&#xA;3. Import journal&#xA;4. Mail sequence for status of import journal" DisplayName="Import journal" sap:VirtualizedContainerService.HintSize="1127,1376" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                                      <Sequence sap2010:Annotation.AnnotationText="1. Launch NAV&#xA;2. Navigate to cash management&#xA;3. Import journal&#xA;4. Mail sequence for status of import journal" DisplayName="Import journal" sap:VirtualizedContainerService.HintSize="733,1376" sap2010:WorkflowViewState.IdRef="Sequence_129">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:Boolean" Name="In_NullValues_Journal" />
                                           <Variable x:TypeArguments="x:Boolean" Name="SalesJournal_OpenEntry" />
@@ -548,21 +548,13 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <Sequence DisplayName="Error mail" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_137">
+                                              <Sequence DisplayName="Error mail" sap:VirtualizedContainerService.HintSize="336,269" sap2010:WorkflowViewState.IdRef="Sequence_137">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_93">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">[Mail_ID]</OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">smangena@surensinffotek.com</InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
                                                 <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi, &quot;+Environment.NewLine+Environment.NewLine+Error_Msg+Environment.NewLine+Environment.NewLine+&quot;For support please contact:&quot;+Environment.NewLine+&quot;• Process                : Grant Hesse                     support@northwind.digital ,&quot;+Environment.NewLine+&quot;                           Thomas Dobson                   ThomasD@blts.co.za &quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="314,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="Sales journal TicketPro Failure notification - Unable to import Sales Journal to Nav " To="[Mail_ID]">
                                                   <ui:SendOutlookMail.Files>
                                                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
@@ -594,7 +586,7 @@
                                                         <InArgument x:TypeArguments="s:String[]">[In_FilePath_ToSend_ViaMail.Split("\"c)]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
-                                                    <If Condition="[In_NullValues_Journal = True]" DisplayName="If - Condition to check null values in journal file" sap:VirtualizedContainerService.HintSize="242,51" sap2010:WorkflowViewState.IdRef="If_105">
+                                                    <If Condition="[In_NullValues_Journal = True]" DisplayName="If - Condition to check null values in journal file" sap:VirtualizedContainerService.HintSize="464,208" sap2010:WorkflowViewState.IdRef="If_105">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -675,14 +667,14 @@
                                                         </Sequence>
                                                       </If.Then>
                                                       <If.Else>
-                                                        <Sequence DisplayName="Success mail based on Document No" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_149">
+                                                        <Sequence DisplayName="Success mail based on Document No" sap:VirtualizedContainerService.HintSize="222,266" sap2010:WorkflowViewState.IdRef="Sequence_149">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <If Condition="[In_DocumentNo]" DisplayName="Condition based on Journal posted" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_103">
+                                                          <If Condition="[In_DocumentNo]" DisplayName="Condition based on Journal posted" sap:VirtualizedContainerService.HintSize="489,533" sap2010:WorkflowViewState.IdRef="If_103">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -690,10 +682,10 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                             <If.Then>
-                                                              <Sequence DisplayName="Success mail - Journal posted" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_140">
+                                                              <Sequence DisplayName="Success mail - Journal posted" sap:VirtualizedContainerService.HintSize="264,385" sap2010:WorkflowViewState.IdRef="Sequence_140">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
